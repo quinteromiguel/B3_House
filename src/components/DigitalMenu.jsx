@@ -57,7 +57,7 @@ function ImagePlaceholder({ className = 'h-24 w-24', iconClassName = 'h-7 w-7' }
 function MenuImage({ image, alt, expanded = false }) {
   const [status, setStatus] = useState('pending');
   const imgRef = useRef(null);
-  const src = `/images/menu/${image}`;
+  const src = `${import.meta.env.BASE_URL}images/menu/${image}`;
 
   useEffect(() => {
     setStatus('pending');
